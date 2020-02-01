@@ -9,22 +9,21 @@ function getRandomInRange(min, max) {
       
     let b = prompt('Угадай число от 1 до 10', '');
 
-    if(b == null){
-        //alert('Закончить игру?');
+    if(b === null){
     }
-    else if(b == ' '){
+    else if(b === '' || b === ' '){
         alert('Введи число!');
         compareNumbers();
        }
-    else if(b > a && b != null){
+    else if(b > a){
       alert('Загаданное число меньше!');
       compareNumbers();
     }
-    else if(b < a && b != null){
+    else if(b < a){
       alert('Загаданное число больше!');
       compareNumbers();
     }
-    else if(b == a && b != null){
+    else if(b == a){
       alert('Ты угадал!');
     }
     else {
